@@ -36,15 +36,6 @@ async function getBooksAndMoviesAsync() {
     }
 }
 
-// async function getBooksOrMoviesAsync() {
-//     try {
-//         const values = await Promise.race([asyncFetchBooks(), asyncFetchMovies()]);
-//         return values;
-//     } catch(error) {
-//         console.error("Error waiting for the promise race", error);
-//     }
-// }
-
 async function getBooksOrMoviesAsync() {
     const values = await Promise.race([asyncFetchBookss(), asyncFetchMovies()]);
     return values;
@@ -67,6 +58,12 @@ getBooksOrMoviesAsync()
     results
     });
 })
-.catch(error =>
-    console.error("Error in getBooksOrMoviesAsync execution", error)
-);
+
+// async function getBooksOrMoviesAsync() {
+//     try {
+//         const values = await Promise.race([asyncFetchBooks(), asyncFetchMovies()]);
+//         return values;
+//     } catch(error) {
+//         console.error("Error waiting for the promise race", error);
+//     }
+// }
