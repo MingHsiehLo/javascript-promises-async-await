@@ -18,7 +18,7 @@ export function fetchBooks() {
 
 export async function asyncFetchMovies() {
     try {
-        const response = await fetch("/data/movies.json");
+        const response = await fetch("./data/movies.json");
         const results = await response.json();
         return results;
     } catch(error) {
@@ -28,7 +28,7 @@ export async function asyncFetchMovies() {
 
 export async function asyncFetchBooks() {
     try {
-        const response = await fetch("/data/books.json");
+        const response = await fetch("./data/books.json");
         const results = await response.json();
         return results;
     } catch(error) {
